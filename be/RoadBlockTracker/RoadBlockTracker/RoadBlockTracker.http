@@ -1,0 +1,6 @@
+@RoadBlockTracker_HostAddress = http://localhost:5284
+
+GET {{RoadBlockTracker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
