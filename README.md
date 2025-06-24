@@ -1,26 +1,33 @@
-🚧 RoadBlockTracker
-RoadBlockTracker is a web application that provides real-time updates on upcoming student protests and road blockades. The platform helps users stay informed about when, where, and why roads are blocked. It also serves as a hub for news, blog posts, and community discussions related to student activism.
+🚧 RoadBlockTracker <br />
 
-🌐 Features
-🗺️ Map with Blockades
-See upcoming student protest locations.
+RoadBlockTracker is a web application that provides real-time updates on upcoming student protests and road blockades. The platform helps users stay informed about when, where, and why roads are blocked. It also serves as a hub for news, blog posts, and community discussions related to student activism. <br />
 
-View affected roads and estimated times of blockage.
+🌐 Features <br />
 
-Publicly accessible — no login required.
+🗺️ Map with Blockades <br />
 
-📰 Protest News
-Stay updated with official student-organized protest announcements.
+See upcoming student protest locations. <br />
 
-Read news about protest causes, logistics, and progress.
+View affected roads and estimated times of blockage. <br />
 
-✍️ Blogs & Comments
-Read blog posts from students.
+Publicly accessible — no login required. <br />
 
-Comment and participate in the discussion (requires login).
+📰 Protest News <br />
 
-👥 Roles
-🧑‍🎓 Admin (Student)
+Stay updated with official student-organized protest announcements. <br />
+
+Read news about protest causes, logistics, and progress. <br />
+
+✍️ Blogs & Comments <br />
+
+Read blog posts from students. <br />
+
+Comment and participate in the discussion (requires login). <br />
+
+👥 Roles <br />
+
+🧑‍🎓 Admin (Student) <br />
+
 Create and publish upcoming protest locations on the map.
 
 Post news articles and blogs.
@@ -36,8 +43,13 @@ Comment on blogs.
 
 View the protest map — even without an account.
 
-🛠️ Tech Stack
+🛠️ Tech Stack <br />
+
 Backend	.NET 8
+
 ORM	Entity Framework Core
+
 Database	SQL Server
+
 Frontend	Angular
+
