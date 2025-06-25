@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadBlockTracker", "RoadBlockTracker\RoadBlockTracker.csproj", "{F960F543-E0FE-4866-9E4F-A502B94F16F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDataAccessLibrary", "EFDataAccessLibrary\EFDataAccessLibrary.csproj", "{CC652102-BECB-4097-AF4A-B136424A3E37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F960F543-E0FE-4866-9E4F-A502B94F16F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F960F543-E0FE-4866-9E4F-A502B94F16F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F960F543-E0FE-4866-9E4F-A502B94F16F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC652102-BECB-4097-AF4A-B136424A3E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC652102-BECB-4097-AF4A-B136424A3E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC652102-BECB-4097-AF4A-B136424A3E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC652102-BECB-4097-AF4A-B136424A3E37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

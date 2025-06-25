@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoadBlockTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68799b4d24411179ec201052c02d63a952ce9caa")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadBlockTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadBlockTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

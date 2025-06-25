@@ -1,0 +1,86 @@
+# Kompajlirani binarni direktorijumi
+bin/
+obj/
+
+# User-specifične konfiguracije
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Paket menadžeri
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log
+.pnp.*
+.pnpjs
+
+# Konfiguracije i logovi
+logs/
+*.log
+App_Data/
+
+# Temporary fajlovi
+*.tmp
+*.temp
+*.pid
+*.svclog
+
+# IDE-ovi i editori
+.idea/
+*.sln.iml
+.vscode/
+*.code-workspace
+*.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio specifični fajlovi
+.vs/
+*.pdb
+*.cache
+*.pfx
+*.publishsettings
+
+# SQL Server fajlovi
+*.mdf
+*.ldf
+
+# Docker
+**/Dockerfile*
+**/docker-compose*
+/.dockerignore
+
+# Kestrel certifikati
+*.crt
+*.key
+.certificate
+
+# User-secrets (ASP.NET Core)
+**/secrets.json
+
+# Staticni fajlovi ili build output
+wwwroot/
+dist/
+bundle/
+build/
+
+# Migration fajlovi
+*.Designer.cs
+
+# Operating system specific
+.DS_Store
+Thumbs.db
+
+# Misc
+*.bak
+*.swp
+*.log
+*.sqlite
+
+**/appsettings.Development.json
+
+
