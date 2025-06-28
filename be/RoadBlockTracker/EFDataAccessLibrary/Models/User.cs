@@ -39,6 +39,10 @@ namespace EFDataAccessLibrary.Models
         public DateTime? RefreshTokenExpiry { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+        public string? EmailConfirmationToken { get; set; }
+
+        public DateTime? EmailConfirmationTokenExpiry { get; set; }
+
 
         public User()
         {

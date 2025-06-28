@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using RoadBlockTracker.Services.Interfaces;
 using RoadBlockTracker.Utilities.Interfaces;
 using RoadBlockTracker.Utilities.Security;
+using System.Net;
 using System.Security.Claims;
 
 namespace RoadBlockTracker.Services.Implementations
@@ -107,7 +108,14 @@ namespace RoadBlockTracker.Services.Implementations
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            var confirmationLink = $"{confirmationBaseUrl}?userId={user.Id}";
+            var token = Guid.NewGuid().ToString(); 
+            user.EmailConfirmationToken = token; 
+            user.EmailConfirmationTokenExpiry = DateTime.UtcNow.AddDays(1); 
+
+            await _context.SaveChangesAsync();
+
+            // Include token in the link
+            var confirmationLink = $"{confirmationBaseUrl}?userId={user.Id}&token={WebUtility.UrlEncode(token)}";
             await _emailService.SendEmailConfirmationAsync(user.Email, confirmationLink);
             var tokens = await GenerateTokens(user);
 
@@ -117,13 +125,15 @@ namespace RoadBlockTracker.Services.Implementations
                 tokens.ExpiresIn);
         }
 
-        public async Task<bool> ConfirmEmailAsync(int userId)
+        public async Task<bool> ConfirmEmailAsync(int userId, string token)
         {
             var user = await _context.Users.FindAsync(userId);
-            if (user == null || user.IsEmailConfirmed)
+            if (user == null || user.IsEmailConfirmed || user.EmailConfirmationToken != token ||
+                user.EmailConfirmationTokenExpiry < DateTime.UtcNow)
                 return false;
 
             user.IsEmailConfirmed = true;
+            user.EmailConfirmationToken = null;
             await _context.SaveChangesAsync();
             return true;
         }

@@ -7,6 +7,8 @@ using System.Security.Claims;
 
 namespace RoadBlockTracker.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
@@ -77,9 +79,9 @@ namespace RoadBlockTracker.Controllers
         }
 
         [HttpGet("confirm-email")]
-        public async Task<IActionResult> ConfirmEmail([FromQuery] int userId)
+        public async Task<IActionResult> ConfirmEmail([FromQuery] int userId, [FromQuery] string token)
         {
-            var result = await _authService.ConfirmEmailAsync(userId);
+            var result = await _authService.ConfirmEmailAsync(userId, token);
 
             if (!result)
                 return NotFound("User not found or already confirmed.");

@@ -76,6 +76,12 @@ namespace EFDataAccessLibrary.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EmailConfirmationToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EmailConfirmationTokenExpiry")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsEmailConfirmed")
                         .HasColumnType("bit");
 

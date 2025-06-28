@@ -10,6 +10,6 @@ namespace RoadBlockTracker.Services.Interfaces
         Task<AuthResponse> RefreshTokenAsync(string refreshToken);
         Task LogoutAsync(int userId);
         Task<AuthResponse> RegisterAsync(RegisterRequest request, string confirmationBaseUrl);
-        public Task<bool> ConfirmEmailAsync(int userId);
+        public Task<bool> ConfirmEmailAsync(int userId, string token);
     }
 }
